@@ -1,0 +1,14 @@
+{
+  "name": "kafka-microservice-app",
+  "version": "1.0.0",
+  "description": "Kafka microservice app with Express, Node.js, producer, and consumer",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "kafkajs": "^2.2.4"
+  }
+}

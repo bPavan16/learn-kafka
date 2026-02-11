@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "7bfe3cfc-5860-4f24-824e-dc7270d3f05a",
+		"name": "Kafka-REST-server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "44636165"
+	},
+	"item": [
+		{
+			"name": "Consumer-check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/"
+			},
+			"response": []
+		},
+		{
+			"name": "Consumer-notice",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Producer-check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4000/"
+			},
+			"response": []
+		},
+		{
+			"name": "Producer-Send",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"message\": \"Hello from Postman\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4000/produce"
+			},
+			"response": []
+		},
+		{
+			"name": "Consumer-message",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5000/messages"
+			},
+			"response": []
+		}
+	]
+}
