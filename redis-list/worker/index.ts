@@ -12,7 +12,6 @@ async function processSubmission(submission: string) {
     console.log(`Address: ${address}`);
     console.log(`Email: ${email}`);
 
-    // Simulate processing delay
     await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log(`Finished processing submission for ${name}.`);
   } catch (error) {
@@ -28,7 +27,6 @@ async function startWorker() {
     // Main loop
     while (true) {
       try {
-        // Wait for a new submission from the "user" list
         const submission = await client.brPop("user", 0);
         if (submission && submission.element) {
           await processSubmission(submission.element);
@@ -37,7 +35,6 @@ async function startWorker() {
         }
       } catch (error) {
         console.error("Error processing submission:", error);
-        // Optionally, add error handling logic here
       }
     }
   } catch (error) {
